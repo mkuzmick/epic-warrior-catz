@@ -2,9 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from 'react';
+import RandomCatImage from '../components/RandomCatImage' 
+import { catFirstNames, catPersonalities, catLastNames, catGenders, catRanks, catExtraInfo } from '../components/CatzData'
 
-const catFirstNames = ["jewel", "flower", "leaf", "tiger", "ferret", "hare", "rabbit", "squirrel", "donkey", "horse", "turtle", "marigold", "fire", "frog", "birch", "oak", "stick", "blue", "red", "green", "clover", "grass", "tortoise", "worm", "bright", "white", "black", "gray", "grey", "cloud", "cherry", "blossom", "lion", "leapord", "snow", "running", "rooster", "finch", "sparrow", "dove", "branch", "fin", "salmon", "cod", "snow", "winter", "spring", "sprout", "twig", "maple", "spruce", "moon", "jungle", "icy", "spotted", "wind", "jay", "thunder", "shadow", "river" ]
-const catLastNames = ["face", "frog", "flower", "fern", "bee", "gem", "meadow", "claw", "foot", "leaf", "paw", "kit", "star", "pool", "heart", "belly", "ear", "nose", "toe", "tail", "fall", "sky", "cherry", "eye", "fur", "blossom", "wing", "feather", "whisker", "stump", "cloud", "spot", "spots", "leg", "dapple", "stripe", "branch", "stick", "twig", "shine", "fang", "tooth", "pelt", "wind", "blaze", "fire", "river", "pond", "ivy", "eel", "fin", "leap", "shadow", "sight", "arm", "tooth", "sprout", "flake", "ice"]
+const OverlapImage = ({ url }) => {
+  return (
+    <img src={url} alt="cat" width="500" position="absolute"></img>
+  )
+}
 
 const randomElement = (list) => {
   return list[Math.floor(Math.random()*list.length)];
@@ -12,7 +17,12 @@ const randomElement = (list) => {
 
 export default function Home() {
   const [cat, setCat] = useState("initialCat");
+  const [personality, setPersonality] = useState("boring");
+  const [rank, setRank] = useState("warrior");
+  const [gender, setGender] = useState("none");
+  const [extraInfo, setExtraInfo] = useState("being not interesting enough, please click again");
   const randomCat = () => { return (randomElement(catFirstNames) + randomElement(catLastNames)) }
+  const randomPersonality = () => { return (randomElement(catPersonalities)) }
   return (
     <div className={styles.container}>
        <main className={styles.main}>
@@ -37,6 +47,65 @@ export default function Home() {
         >new epic cat</div>
         <h1>{ cat } </h1>
 
+        <div>
+          <RandomCatImage />
+        </div>
+        <div 
+          onClick={ () => setPersonality(randomPersonality) } 
+          style={{
+            fontSize: "1em",
+            borderRadius: "10px",
+            color: "white",
+            fontWeight: "900", 
+            backgroundColor: "rgba(23, 22, 237, .7)",
+            padding: "1em",
+            cursor: "pointer",
+            userSelect: "none"
+          }}
+        >new personality</div>
+        <p>This cat is known for being quite {personality}</p>
+        <div 
+          onClick={ () => setGender(randomElement(catGenders)) } 
+          style={{
+            fontSize: "1em",
+            borderRadius: "10px",
+            color: "white",
+            fontWeight: "900", 
+            backgroundColor: "rgba(23, 178, 21, .7)",
+            padding: "1em",
+            cursor: "pointer",
+            userSelect: "none"
+          }}
+        >change gender</div>
+        <h2>{gender}</h2>
+        <div 
+          onClick={ () => setRank(randomElement(catRanks)) } 
+          style={{
+            fontSize: "1em",
+            borderRadius: "10px",
+            color: "white",
+            fontWeight: "900", 
+            backgroundColor: "rgba(33, 31, 30, .7)",
+            padding: "1em",
+            cursor: "pointer",
+            userSelect: "none"
+          }}
+        >change rank</div>
+        <h2>this cat is {rank}</h2>
+         <div 
+          onClick={ () => setExtraInfo(randomElement(catExtraInfo)) } 
+          style={{
+            fontSize: "1em",
+            borderRadius: "10px",
+            color: "white",
+            fontWeight: "900", 
+            backgroundColor: "rgba(235, 76, 34, .7)",
+            padding: "1em",
+            cursor: "pointer",
+            userSelect: "none"
+          }}
+        >generate extra info</div>
+        <h2>This cat is known for {extraInfo}.</h2>
       </main>
 
     </div>
