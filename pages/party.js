@@ -9,7 +9,7 @@ export default function Home() {
         uhhhhh
       </h1>
       <p>e e e  e e e e e e e e never gonna give you up</p>
-      <iframe width="800" height="500" src="https://www.youtube.com/embed/6Zbi0XmGtMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="800" height="500" src="https://www.youtube.com/embed/6Zbi0XmGtMw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </div>
   )  
 }
