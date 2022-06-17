@@ -1,20 +1,12 @@
 import React from 'react'
 import styles from './RandomCatImage.module.css'
 import path from 'path'
-import { earImages, bodyMarkings } from './CatzImages'
-
-const catPaths = [
-    "Untitled_Artwork-1.png",
-    "Untitled_Artwork-2.png",
-    "Untitled_Artwork-3.png",
-    "Untitled_Artwork-4.png",
-    "Untitled_Artwork-5.png",
-]
+import { earImages, bodyMarkings, eyes, mouths, colorsOfCat } from './CatzImages'
 
 const CatOutline = () => {
     return (
         <div>
-            <img src="/catz/outline/Untitled_Artwork.png" alt="cat" className={styles.overlay}></img>
+            <img src="/catz/outline/outline-1.png" alt="cat" className={styles.overlay}></img>
         </div>
     )
 }
@@ -23,11 +15,12 @@ const randomElement = (list) => {
     return list[Math.floor(Math.random()*list.length)];
 }
 
+const catzData = { earImages, bodyMarkings, eyes, mouths, colorsOfCat }
+
 const RandomCatElement = ({ type }) => {
-    const url = `/catz/${type}/${randomElement(catPaths)}`
     return (
         <div>
-            <img src={ url } alt="cat" className={styles.overlay}></img>
+            <img src={ randomElement(catzData[type]) } alt="cat" className={styles.overlay}></img>
         </div>
     )
 }
@@ -49,14 +42,16 @@ const RandomBodyMarkings = () => {
 }
 
 const RandomCatImage = () => {
+    
     return (
         <div className={styles.container}>
-            <RandomCatElement type="colors-of-cat" />
+            <RandomCatElement type="colorsOfCat" />
             <CatOutline />
             <RandomBodyMarkings />
             <RandomEars />
             <RandomCatElement type="mouths" />
             <RandomCatElement type="eyes" />
+            {/* <pre>{JSON.stringify(catzData, null, 4)}</pre> */}
         </div>
     )
 }

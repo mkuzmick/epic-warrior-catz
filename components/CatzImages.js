@@ -54,6 +54,37 @@ const bodyMarkings = [
     "/catz/body-markings/swirly-thingies-7.png",
 ]
 
+const mouths = [
+    "/catz/mouths/mouths-1.png",
+    "/catz/mouths/mouths-2.png",
+    "/catz/mouths/mouths-3.png",
+    "/catz/mouths/mouths-4.png",
+    "/catz/mouths/mouths-5.png",
+    "/catz/mouths/mouths-6.png",
+    "/catz/mouths/mouths-7.png",
+    "/catz/mouths/mouths-8.png",
+]
 
+const eyes = [
+    "/catz/eyes/eyes-1.png",
+    "/catz/eyes/eyes-2.png",
+    "/catz/eyes/eyes-3.png",
+    "/catz/eyes/eyes-4.png",
+    "/catz/eyes/eyes-5.png",
+    "/catz/eyes/eyes-6.png",
+    "/catz/eyes/eyes-7.png",
+    "/catz/eyes/eyes-8.png",
+    "/catz/eyes/eyes-9.png",
+]
 
-  export { earImages, bodyMarkings }
+const colorsOfCat = [
+    "/catz/colors-of-cat/colors-of-cat-1.png",
+    "/catz/colors-of-cat/colors-of-cat-2.png",
+    "/catz/colors-of-cat/colors-of-cat-3.png",
+    "/catz/colors-of-cat/colors-of-cat-4.png",
+    "/catz/colors-of-cat/colors-of-cat-5.png",
+    "/catz/colors-of-cat/colors-of-cat-6.png",
+    "/catz/colors-of-cat/colors-of-cat-7.png",
+]
+
+  export { earImages, bodyMarkings, eyes, mouths, colorsOfCat }
