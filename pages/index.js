@@ -35,7 +35,7 @@ export default function Home() {
         <div 
           onClick={ () => setCat(randomCat) } 
           style={{
-            fontSize: "3em",
+            fontSize: "1em",
             borderRadius: "10px",
             color: "white",
             fontWeight: "900", 
@@ -44,7 +44,7 @@ export default function Home() {
             cursor: "pointer",
             userSelect: "none"
           }}
-        >new epic cat</div>
+        >new name</div>
         <h1>{ cat } </h1>
         <div 
           onClick={ () => setPersonality(randomPersonality) } 

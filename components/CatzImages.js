@@ -87,4 +87,47 @@ const colorsOfCat = [
     "/catz/colors-of-cat/colors-of-cat-7.png",
 ]
 
-  export { earImages, bodyMarkings, eyes, mouths, colorsOfCat }
+const faceMarkings =[
+    "/catz/face-markings/face-stripes-1.png",
+    "/catz/face-markings/face-stripes-2.png",
+    "/catz/face-markings/face-stripes-3.png",
+    "/catz/face-markings/face-stripes-4.png",
+    "/catz/face-markings/face-stripes-5.png",
+    "/catz/face-markings/face-stripes-6.png",
+    "/catz/face-markings/face-stripes-7.png",
+    "/catz/face-markings/weird-swirly-cheek-things-1.png",
+    "/catz/face-markings/weird-swirly-cheek-things-2.png",
+    "/catz/face-markings/weird-swirly-cheek-things-3.png",
+    "/catz/face-markings/weird-swirly-cheek-things-4.png",
+    "/catz/face-markings/weird-swirly-cheek-things-5.png",
+    "/catz/face-markings/weird-swirly-cheek-things-6.png",
+    "/catz/face-markings/weird-swirly-cheek-things-7.png",
+
+     
+]
+
+const legMarkings =[
+    "/catz/leg-markings/foot-1.png",
+    "/catz/leg-markings/foot-2.png",
+    "/catz/leg-markings/foot-3.png",
+    "/catz/leg-markings/foot-4.png",
+    "/catz/leg-markings/foot-5.png",
+    "/catz/leg-markings/foot-6.png",
+    "/catz/leg-markings/foot-7.png",
+    "/catz/leg-markings/leg-stripes-1.png",
+    "/catz/leg-markings/leg-stripes-2.png",
+    "/catz/leg-markings/leg-stripes-3.png",
+    "/catz/leg-markings/leg-stripes-4.png",
+    "/catz/leg-markings/leg-stripes-5.png",
+    "/catz/leg-markings/leg-stripes-6.png",
+    "/catz/leg-markings/leg-stripes-7.png",
+    "/catz/leg-markings/leg-swirls-1.png",
+    "/catz/leg-markings/leg-swirls-2.png",
+    "/catz/leg-markings/leg-swirls-3.png",
+    "/catz/leg-markings/leg-swirls-4.png",
+    "/catz/leg-markings/leg-swirls-5.png",
+    "/catz/leg-markings/leg-swirls-6.png",
+    "/catz/leg-markings/leg-swirls-7.png",
+]
+
+  export { earImages, bodyMarkings, eyes, mouths, colorsOfCat, faceMarkings, legMarkings }
