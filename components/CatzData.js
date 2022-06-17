@@ -27,7 +27,9 @@ const catFirstNames = [
     "thunder", "shadow", "river", "strike", 
     "stone", "rock", "cinnamon", "silver", 
     "hawk", "honey", "bumble", "clover", 
-    "falcon", "frost", "forest", "moth", 
+    "falcon", "frost",
+     "forest",
+      "moth", 
     "little", 
     "tiny", 
     "small", 
@@ -56,7 +58,8 @@ const catFirstNames = [
      "stone", 
      "hawk", 
      "fire", 
-     "frost"
+     "frost",
+     "strike"
   ]
   
   const catPersonalities =[
@@ -109,7 +112,12 @@ const catFirstNames = [
   "being scared of birds",
   "being also talented",
   "being an amazing hunter",
-  "running away and saying, 'i like donuts more than mice anyway'"
+  "running away and saying, 'i like donuts more than mice anyway'",
+  "singing never gonna give yo up for 2 hours straight",
+  "being a dunkin donuts employee",
+  "being epic",
+  "never making their bed",
 ]
 
-  export { catRanks, catLastNames, catFirstNames, catPersonalities, catGenders, catExtraInfo }
+
+export { catRanks, catLastNames, catFirstNames, catPersonalities, catGenders, catExtraInfo }

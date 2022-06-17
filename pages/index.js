@@ -18,7 +18,7 @@ const randomElement = (list) => {
 export default function Home() {
   const [cat, setCat] = useState("initialCat");
   const [personality, setPersonality] = useState("boring");
-  const [rank, setRank] = useState("warrior");
+  const [rank, setRank] = useState("a warrior");
   const [gender, setGender] = useState("none");
   const [extraInfo, setExtraInfo] = useState("being not interesting enough, please click again");
   const randomCat = () => { return (randomElement(catFirstNames) + randomElement(catLastNames)) }
@@ -46,10 +46,6 @@ export default function Home() {
           }}
         >new epic cat</div>
         <h1>{ cat } </h1>
-
-        <div>
-          <RandomCatImage />
-        </div>
         <div 
           onClick={ () => setPersonality(randomPersonality) } 
           style={{
@@ -63,7 +59,7 @@ export default function Home() {
             userSelect: "none"
           }}
         >new personality</div>
-        <p>This cat is known for being quite {personality}</p>
+        <h2>This cat is known for being quite {personality}</h2>
         <div 
           onClick={ () => setGender(randomElement(catGenders)) } 
           style={{
@@ -106,6 +102,9 @@ export default function Home() {
           }}
         >generate extra info</div>
         <h2>This cat is known for {extraInfo}.</h2>
+        <div>
+          <RandomCatImage />
+        </div>
       </main>
 
     </div>
