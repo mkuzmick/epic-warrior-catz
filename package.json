@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "bin": {
-    "epik": "epic-cat-generator-III.js"
+    "epik": "utilities/epic-cat-generator-III.js"
   },
   "dependencies": {
     "next": "12.1.6",
