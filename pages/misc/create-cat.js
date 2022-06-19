@@ -2,8 +2,8 @@ import Dashboard from "../../components/Dashboard"
 
 export default () => (
     <div>
-        <Dashboard />
-
+        test
+        {/* <Dashboard /> */}
     </div>
     
 )
