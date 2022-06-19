@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
   color: red;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Lobster';
 }
 
 a {
