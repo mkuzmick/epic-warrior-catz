@@ -27,7 +27,7 @@ export default function Home() {
     <div className={styles.container}>
        <main className={styles.main}>
         <h1 className={styles.title}>
-          welcome to <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> epic warrior cats </a>
+          welcome to <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> epic warrior cats. </a>
         </h1>
         <p>
          we like to party. we like to party. we like we like to party  
