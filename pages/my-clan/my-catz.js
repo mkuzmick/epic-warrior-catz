@@ -3,25 +3,51 @@ import Image from 'next/image'
 import React, { useState } from 'react';
 import CatCard from '../../components/CatCard'
 import styles from '../../styles/Home.module.css' 
+import initialCatz from '../../data/sample-catz.js'
 
 export default function Home() {
-  const [cat, setCat] = useState({
-    name: "this cat",
-    experience: "0",
-    clicks: 0
-  });
-  
+  const [catz, setCatz] = useState([...initialCatz]);
+
+  const changeCat = (newCat, index) => {
+    let newCatz = [...catz]
+    newCatz[index] = newCat
+    if (newCat.experience >=100) {
+      newCat.rank="Leader"
+    } else if(newCat.rank == ("Warrior" || "MedicineCat")) {
+
+    } else if (newCat.experience >=50) {
+      let result = Math.random()
+      if (result > .5) {
+        newCat.rank="Warrior"
+      } else {
+        newCat.rank="MedicineCat"
+      }
+    } else if (newCat.experience >=12) {
+      newCat.rank="Apprentice"
+    }
+    
+
+
+    
+    setCatz(newCatz)
+  }
+
   return (
     <div className={styles.container}>
-       <main className={styles.main}>
-        <h1 className={styles.title}>
-          welcome to <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> epic warrior cats </a>
-        </h1>
-        <button onClick={()=>{setCat({...cat, clicks: cat.clicks+1})}}>click to add a click</button>
-        <h2>{cat.clicks}</h2>
-        <h2>{cat.name}</h2>
+      <main className={styles.main}>
+        <h1>my-catz</h1>
+        <div>
+            {catz.map(
+              (thisCat, i) => {
+                return (
+                  <CatCard cat={thisCat} id={i} changeCat={changeCat}/>
+                )
+              }
+            )}
+        </div>
       </main>
-
     </div>
   )
+  
 }
+
