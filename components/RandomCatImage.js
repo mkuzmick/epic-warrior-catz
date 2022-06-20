@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './RandomCatImage.module.css'
+import Image from 'next/image'
 import path from 'path'
 import { earImages, bodyMarkings, eyes, mouths, colorsOfCat, faceMarkings, legMarkings } from './CatzImages'
 
 const CatOutline = () => {
     return (
         <div>
-            <img src="/catz/outline/outline-1.png" alt="cat" className={styles.overlay}></img>
+            <Image src="/catz/outline/outline-1.png" alt="cat" className={styles.overlay} layout="fill" />
         </div>
     )
 }
@@ -20,7 +21,9 @@ const catzData = { earImages, bodyMarkings, eyes, mouths, colorsOfCat }
 const RandomCatElement = ({ type }) => {
     return (
         <div>
-            <img src={ randomElement(catzData[type]) } alt="cat" className={styles.overlay}></img>
+            <picture>
+                <img src={ randomElement(catzData[type]) } alt="cat" className={styles.overlay}></img>
+            </picture>
         </div>
     )
 }
