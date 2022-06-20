@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from './party.module.css'
 
-export default function Home() {
+export default function Party() {
   return (
     <div>
       <h1>

@@ -2,7 +2,7 @@ import style from './CatCard.module.css'
 import { useState } from 'react'
 
 const CatCard = ({ onClick, cat, id, changeCat }) => {
-    const [experience, setExperience] = useState(0)
+    const [experience, setExperience] = useState(cat.experience)
     return (
         <div onClick={()=>{
                 console.log(cat)

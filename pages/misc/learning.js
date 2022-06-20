@@ -1,6 +1,6 @@
 const TheCode = ({object}) => (<pre>{JSON.stringify(object, null, 4)}</pre>) 
 
-export default () => {
+const Learning = () => {
 
     const myObject = {
         name: "Zibby",
@@ -27,3 +27,5 @@ export default () => {
         </div>
     )
 }
+
+export default Learning

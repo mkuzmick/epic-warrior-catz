@@ -5,7 +5,7 @@ import CatCard from '../../components/CatCard'
 import styles from '../../styles/Home.module.css' 
 import initialCatz from '../../data/sample-catz.js'
 
-export default function Home() {
+export default function MyCatz() {
   const [catz, setCatz] = useState([...initialCatz]);
 
   const changeCat = (newCat, index) => {
@@ -25,10 +25,6 @@ export default function Home() {
     } else if (newCat.experience >=12) {
       newCat.rank="Apprentice"
     }
-    
-
-
-    
     setCatz(newCatz)
   }
 
@@ -40,7 +36,7 @@ export default function Home() {
             {catz.map(
               (thisCat, i) => {
                 return (
-                  <CatCard cat={thisCat} id={i} changeCat={changeCat}/>
+                  <CatCard key={i} cat={thisCat} id={i} changeCat={changeCat}/>
                 )
               }
             )}
