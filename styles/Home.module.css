@@ -114,3 +114,8 @@
     flex-direction: column;
   }
 }
+
+.mapBackground {
+  background-image: url("/mapz/epic-catz-map-1.jpg");
+  background-size: cover
+}

@@ -29,7 +29,8 @@ export default function MyCatz() {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.mapBackground}>
+       <div className={styles.container}>
       <main className={styles.main}>
         <h1>my-catz</h1>
         <div>
@@ -42,6 +43,7 @@ export default function MyCatz() {
             )}
         </div>
       </main>
+    </div>
     </div>
   )
   

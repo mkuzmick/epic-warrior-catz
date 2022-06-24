@@ -7,7 +7,7 @@ import { earImages, bodyMarkings, eyes, mouths, colorsOfCat, faceMarkings, legMa
 const CatOutline = () => {
     return (
         <div>
-            <Image src="/catz/outline/outline-1.png" alt="cat" className={styles.overlay} layout="fill" />
+            <img src="/catz/outline/outline-1.png" alt="cat" className={styles.overlay} />
         </div>
     )
 }
